@@ -9,7 +9,8 @@ import connectDB from './config/dbConn';
 import { logEvents, logger } from './middleware/logger';
 import corsOptions from './config/corsOptions';
 import errorHandler from './middleware/errorHandler';
-import usersRoute from './routes/userRoutes';
+import UsersRoute from './routes/userRoutes';
+import NotesRoute from './routes/note.routes';
 
 console.log(process.env.NODE_ENV);
 
@@ -29,7 +30,8 @@ app.use(cookieParser());
 app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./routes/root'));
-app.use('/users', usersRoute);
+app.use('/users', UsersRoute);
+app.use('/', NotesRoute);
 
 app.all('*', (req: Request, res: Response) => {
   res.status(404);

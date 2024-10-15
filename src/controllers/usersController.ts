@@ -124,7 +124,7 @@ const deleteUser = expressAsyncHandler(async (req, res): Promise<void> => {
     return;
   }
 
-  await User.deleteOne();
+  await user.deleteOne();
 
   const reply = `Username ${user?.username} with ID ${user?._id} has been deleted`;
 
