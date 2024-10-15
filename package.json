@@ -5,17 +5,19 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.ts",
-    "dev": "nodemon src/server.ts"
+    "dev": "nodemon -r tsconfig-paths/register src/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "date-fns": "^4.1.0",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "express-async-handler": "^1.2.0",
     "mongoose": "^8.7.1",
     "mongoose-sequence": "^6.0.1",
     "uuid": "^10.0.0"
@@ -28,6 +30,7 @@
     "@types/uuid": "^10.0.0",
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.6.3"
   }
 }

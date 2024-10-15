@@ -22,7 +22,7 @@
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"],
-      "@config": ["src/config"],
+      "@config": ["config"],
       "@controllers/*": ["controllers/*"],
       "@databases": ["databases"],
       "@dtos/*": ["dtos/*"],
