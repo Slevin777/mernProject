@@ -4,4 +4,4 @@ const allowedOrgigins = [
   "https://ddnf.cofm",
 ];
 
-module.exports = allowedOrgigins;
+export default allowedOrgigins;

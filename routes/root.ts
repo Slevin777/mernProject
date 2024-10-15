@@ -1,8 +1,9 @@
-const express = require("express");
-const router = express.Router();
-const path = require("path");
+import express from "express";
+import path from "path";
 
-router.get("^/$|/index(.html)?", (req, res) => {
+const router = express.Router();
+
+router.get("^/$|/index(.html)?", (_req, res) => {
   res.sendFile(path.join(__dirname, "..", "views", "index.html"));
 });
 
